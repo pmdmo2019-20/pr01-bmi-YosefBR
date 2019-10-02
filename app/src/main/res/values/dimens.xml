@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- TODO -->
+    <dimen name="vpPadding">15dp</dimen>
+    <dimen name="buttonWdt">0dp</dimen>
+    <dimen name="margin">50dp</dimen>
 </resources>

@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Body Mass Index</string>
+    <string name="weitghtTv">Weight</string>
+    <string name="heightTv">Height</string>
+    <string name="resetBtn">RESET</string>
+    <string name="calculateBmiBtn">CALCULATE BMI</string>
+    <string name="low_weight">%.2f Low weight</string>
+    <string name="normal_weight">%.2f Normal weight</string>
+    <string name="overweight">%.2f Overweight</string>
+    <string name="obesity_grade_1">%.2f Obesity grade 1</string>
+    <string name="obesity_grade_2">%.2f Obesity grade 2</string>
+    <string name="obesity_grade_3">%.2f Obesity grade 3</string>
     <!-- TODO -->
 </resources>
