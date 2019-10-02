@@ -23,6 +23,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
+
 public class MainActivityTest {
 
     @Rule
@@ -35,6 +36,8 @@ public class MainActivityTest {
     public void should_txtWeight_show_error_when_not_float() {
         onView(withId(R.id.txtWeight))
             .perform(typeText(""), closeSoftKeyboard());
+        onView(withId(R.id.txtHeight))
+                .perform(typeText("2"), closeSoftKeyboard());
         onView(withId(R.id.btnCalculate)).perform(click());
 
         onView(withId(R.id.txtWeight))

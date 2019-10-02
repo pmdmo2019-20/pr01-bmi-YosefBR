@@ -12,10 +12,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/weitghtTv" />
+        android:text="@string/weightTv" />
 
     <EditText
-        android:id="@+id/weightEdt"
+        android:id="@+id/txtWeight"
         android:layout_width="match_parent"
         android:inputType="number"
         android:layout_height="wrap_content"/>
@@ -26,7 +26,7 @@
         android:text="@string/heightTv" />
 
     <EditText
-        android:id="@+id/heightEdt"
+        android:id="@+id/txtHeight"
         android:layout_width="match_parent"
         android:inputType="number"
         android:layout_height="wrap_content"/>
@@ -36,14 +36,14 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/reset"
+            android:id="@+id/btnReset"
             android:layout_width="@dimen/buttonWdt"
             android:layout_height="wrap_content"
             android:text="@string/resetBtn"
             android:layout_weight="1"/>
 
         <Button
-            android:id="@+id/calculateBmi"
+            android:id="@+id/btnCalculate"
             android:layout_width="@dimen/buttonWdt"
             android:layout_height="wrap_content"
             android:text="@string/calculateBmiBtn"
@@ -53,14 +53,14 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/messageTv"
+        android:id="@+id/lblResult"
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/margin"
         android:textAlignment="center"
         android:layout_height="wrap_content"/>
 
     <ImageView
-        android:id="@+id/imageVw"
+        android:id="@+id/imgBmi"
         android:src="@drawable/bmi"
         android:layout_marginTop="@dimen/margin"
         android:layout_width="wrap_content"

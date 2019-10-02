@@ -34,15 +34,18 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean validateWeight() {
         if (txtWeight.getText().toString().equals("")){
-            txtWeight.setError("Invalid weight");
+            txtWeight.requestFocus();
+            txtWeight.setError(getString(R.string.main_invalid_weight));
             return false;
         }
         else if (Float.parseFloat(txtWeight.getText().toString()) > 500) {
-            txtWeight.setError("Invalid weight");
+            txtWeight.requestFocus();
+            txtWeight.setError(getString(R.string.main_invalid_weight));
             return false;
         }
         else if (Float.parseFloat(txtWeight.getText().toString()) <= 0.5) {
-            txtWeight.setError("Invalid weight");
+            txtWeight.requestFocus();
+            txtWeight.setError(getString(R.string.main_invalid_weight));
             return false;
         }
         else {
@@ -52,15 +55,15 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean validateHeight() {
         if (txtHeight.getText().toString().equals("")){
-            txtHeight.setError("Invalid weight");
+            txtHeight.setError(getString(R.string.main_invalid_height));
             return false;
         }
         else if (Float.parseFloat(txtHeight.getText().toString()) > 3) {
-            txtHeight.setError("Invalid weight");
+            txtHeight.setError(getString(R.string.main_invalid_height));
             return false;
         }
         else if (Float.parseFloat(txtHeight.getText().toString()) <= 1) {
-            txtHeight.setError("Invalid weight");
+            txtHeight.setError(getString(R.string.main_invalid_height));
             return false;
         }
         else {
@@ -78,27 +81,27 @@ public class MainActivity extends AppCompatActivity {
 
             switch (bmiC.getBmiClasification(bmi)) {
                 case LOW_WEIGHT:
-                    lblResult.setText("BMI: " + getString(R.string.low_weight, bmi));
+                    lblResult.setText(getString(R.string.main_bmi, bmi, getString(R.string.main_low_weight)));
                     imgBmi.setImageResource(R.drawable.underweight);
                     break;
                 case NORMAL_WEIGHT:
-                    lblResult.setText("BMI: " + getString(R.string.normal_weight, bmi));
+                    lblResult.setText(getString(R.string.main_bmi, bmi, getString(R.string.main_normal_weight)));
                     imgBmi.setImageResource(R.drawable.normal_weight);
                     break;
                 case OVERWWEIGHT:
-                    lblResult.setText("BMI: " + getString(R.string.overweight, bmi));
+                    lblResult.setText(getString(R.string.main_bmi, bmi, getString(R.string.main_overweight)));
                     imgBmi.setImageResource(R.drawable.overweight);
                     break;
                 case OBESITY_GRADE_1:
-                    lblResult.setText("BMI: " + getString(R.string.obesity_grade_1, bmi));
+                    lblResult.setText(getString(R.string.main_bmi, bmi, getString(R.string.main_obesity_grade_1)));
                     imgBmi.setImageResource(R.drawable.obesity1);
                     break;
                 case OBESITY_GRADE_2:
-                    lblResult.setText("BMI: " + getString(R.string.obesity_grade_2, bmi));
+                    lblResult.setText(getString(R.string.main_bmi, bmi, getString(R.string.main_obesity_grade_2)));
                     imgBmi.setImageResource(R.drawable.obesity2);
                     break;
                 case OBESITY_GRADE_3:
-                    lblResult.setText("BMI: " + getString(R.string.obesity_grade_3, bmi));
+                    lblResult.setText(getString(R.string.main_bmi, bmi, getString(R.string.main_obesity_grade_3)));
                     imgBmi.setImageResource(R.drawable.obesity3);
                     break;
             }
@@ -115,12 +118,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupViews() {
-        txtWeight = ActivityCompat.requireViewById(this, R.id.weightEdt);
-        txtHeight = ActivityCompat.requireViewById(this, R.id.heightEdt);
-        btnCalculate = ActivityCompat.requireViewById(this, R.id.calculateBmi);
-        btnReset = ActivityCompat.requireViewById(this, R.id.reset);
-        imgBmi = ActivityCompat.requireViewById(this, R.id.imageVw);
-        lblResult = ActivityCompat.requireViewById(this, R.id.messageTv);
+        txtWeight = ActivityCompat.requireViewById(this, R.id.txtWeight);
+        txtHeight = ActivityCompat.requireViewById(this, R.id.txtHeight);
+        btnCalculate = ActivityCompat.requireViewById(this, R.id.btnCalculate);
+        btnReset = ActivityCompat.requireViewById(this, R.id.btnReset);
+        imgBmi = ActivityCompat.requireViewById(this, R.id.imgBmi);
+        lblResult = ActivityCompat.requireViewById(this, R.id.lblResult);
 
         btnCalculate.setOnClickListener(x -> showImageAndText());
         btnReset.setOnClickListener(x -> resetAll());
