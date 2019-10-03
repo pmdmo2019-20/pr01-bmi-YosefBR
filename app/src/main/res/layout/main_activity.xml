@@ -17,7 +17,7 @@
     <EditText
         android:id="@+id/txtWeight"
         android:layout_width="match_parent"
-        android:inputType="number"
+        android:inputType="numberDecimal|number"
         android:layout_height="wrap_content"/>
 
     <TextView
@@ -28,7 +28,7 @@
     <EditText
         android:id="@+id/txtHeight"
         android:layout_width="match_parent"
-        android:inputType="number"
+        android:inputType="numberDecimal|number"
         android:layout_height="wrap_content"/>
 
     <LinearLayout

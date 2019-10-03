@@ -1,6 +1,8 @@
 package es.iessaladillo.pedrojoya.pr01.ui.main;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -74,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
     private void showImageAndText() {
 
         float bmi;
+        InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
 
         if (validateHeight()&&validateWeight()) {
 
@@ -106,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
         }
+        inputMethodManager.hideSoftInputFromWindow(txtHeight.getWindowToken(), 0);
     }
 
     private void resetAll() {
